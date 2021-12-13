@@ -1,1 +1,67 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+// Define a light theme
+$light-primary: mat.define-palette(mat.$indigo-palette);
+$light-accent: mat.define-palette(mat.$pink-palette);
+$light-theme: mat.define-light-theme((
+ color: (
+   primary: $light-primary,
+   accent: $light-accent,
+ )
+));
+
+// Define a dark theme
+$dark-primary: mat.define-palette(mat.$pink-palette);
+$dark-accent: mat.define-palette(mat.$blue-gray-palette);
+$dark-theme: mat.define-dark-theme((
+ color: (
+   primary: $dark-primary,
+   accent: $dark-accent,
+ )
+));
+
+// Apply the dark theme by default
+@include mat.core-theme($dark-theme);
+@include mat.button-theme($dark-theme);
+
+// Apply the light theme only when the `.my-light-theme` CSS class is applied
+// to an ancestor element of the components (such as `body`).
+.my-light-theme {
+ @include mat.core-color($light-theme);
+ @include mat.button-color($light-theme);
+}
+
+/* For complete list of icons visit here: https://linearicons.com/free#cdn */
+.lnr {
+    display: inline-block;
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.05em;
+  }
+  
+  .lnr-home {
+    color: #ffffff;
+    /* We can use "color" for setting the color
+    of the SVG because we set its "fill" to
+    "currentColor" */
+    font-size: 40px;
+    /* We can use "font-size" for changing the size
+    of the SVG because its width and height were
+    set 1em.
+    To get crisp results, use sizes that are
+    a multiple of 20; because Linearicons was
+    designed on a 20 by 20 grid. */
+  }
+  
+//   body {
+//     font-size: 40px;
+//     font-family: sans-serif;
+//     color: #555;
+//   }
+  
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
