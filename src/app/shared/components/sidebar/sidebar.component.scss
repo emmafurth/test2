@@ -1,12 +1,14 @@
+@import '../../../variables';
+
 .sidenav{
     position: absolute;
-    bottom: 60px;
+    bottom: $footer-height;
     left: 0;
     right: 0;
 }
 
 .page-content {
-    height: calc(88vh - 60px);
+    height: calc(88vh - $footer-height);
 }
 
 .menu-button {
