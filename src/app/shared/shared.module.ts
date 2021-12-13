@@ -7,7 +7,7 @@ import { MatListModule } from '@angular/material/list'
 
 
 import { AppRoutingModule } from '../app-routing.module';
-import { SidebarComponent } from "./components/sidebar.component";
+import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
