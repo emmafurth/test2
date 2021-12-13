@@ -9,6 +9,7 @@ import { MatListModule } from '@angular/material/list'
 import { AppRoutingModule } from '../app-routing.module';
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterComponent } from "./components/footer/footer.component";
 
 @NgModule({
     imports: [
@@ -20,10 +21,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         MatIconModule,
         MatListModule
     ],
-    declarations: [SidebarComponent],
+    declarations: [SidebarComponent,FooterComponent],
     exports: [
         AppRoutingModule,
         SidebarComponent,
+        FooterComponent,
         MatSidenavModule,
         MatToolbarModule,
         MatIconModule,

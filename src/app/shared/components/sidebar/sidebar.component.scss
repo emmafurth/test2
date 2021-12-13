@@ -1,8 +1,12 @@
 .sidenav{
     position: absolute;
-    bottom: 0;
+    bottom: 60px;
     left: 0;
     right: 0;
+}
+
+.page-content {
+    height: calc(88vh - 60px);
 }
 
 .menu-button {
